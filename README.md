@@ -4,7 +4,7 @@ AzFinOps is a collection of PowerShell functions designed for Azure Financial Op
 
 ## Prerequisites
 
-This module was developed using PowerShell Core 7.3.6. While compatibility with Windows PowerShell 5.1 and later is anticipated, it has not been fully tested. To get started, you'll need to have the base Az module installed:
+Before diving in, let's make sure you're all set! This module was crafted with love using PowerShell Core 7.3.6. A handful of functions take advantage of the `Foreach-Object -Parallel` cmdlet, which means you'll need at least PowerShell 7.0 Preview 3 to enjoy those bits. I highly recommend you install the latest. To get started, you'll need to have the base Az module installed:
 
 ```PowerShell
 Install-Module Az
