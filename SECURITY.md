@@ -17,7 +17,7 @@ If you discover a security vulnerability in the AzFinOps module, please follow t
     Describe the vulnerability with as much detail as possible, including steps to reproduce the issue and potential impact.
 
 3. **Confidentiality:**  
-    If the vulnerability is sensitive, please reach out privately to the maintainers via email at [andre@azfinops.blog](mailto:andre@azfinops.blog) instead of creating a public issue.
+    If the vulnerability is sensitive, please reach out privately to the maintainers via [vulnerability report](https://github.com/sc-andrep/AzFinOps/security/advisories/new) instead of creating a public issue.
 
 ## Responsible Disclosure
 
