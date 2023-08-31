@@ -35,11 +35,11 @@ function Get-AzFinOpsRecommendation {
     [string] $Subscription
   )
 
-  function Get-Recommendations {
+  function Get-Recommendation {
     param (
       [string] $SubscriptionId
     )
-    Set-AzContext $subscription | Out-Null
+    Set-AzContext $SubscriptionId | Out-Null
     $recommendations = Get-AzAdvisorRecommendation `
     | Where-Object 'Category' -eq 'Cost'
     return $recommendations
@@ -50,11 +50,11 @@ function Get-AzFinOpsRecommendation {
   $report = @() # Contains final report data
 
   if ($Subscription) {
-    $data += Get-Recommendations -SubscriptionId $Subscription
+    $data += Get-Recommendation -SubscriptionId $Subscription
   } else {
     $subscriptions = Get-AzSubscription -WarningAction Ignore
     foreach ($subscription in $subscriptions) {
-      $data += Get-Recommendations -SubscriptionId $subscription
+      $data += Get-Recommendation -SubscriptionId $subscription
     }
   }
 
@@ -73,7 +73,4 @@ function Get-AzFinOpsRecommendation {
 
   $numberOfRecommendations = $data.Count
   $report | Export-Csv -Path "$Output/FinOps-Recommendations.csv" -NoTypeInformation
-
-  Write-Host "There are a total of $numberOfRecommendations recommendations." `
-  "Check the exported file for more information."
 }
