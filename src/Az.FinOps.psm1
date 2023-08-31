@@ -71,6 +71,5 @@ function Get-AzFinOpsRecommendation {
     $report += $row
   }
 
-  $numberOfRecommendations = $data.Count
   $report | Export-Csv -Path "$Output/FinOps-Recommendations.csv" -NoTypeInformation
 }
