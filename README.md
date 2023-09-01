@@ -4,33 +4,4 @@ AzFinOps is a collection of PowerShell functions designed for Azure Financial Op
 
 ![AzFinOps Logo](Logo.png)
 
-## Prerequisites
-
-Before diving in, let's make sure you're all set! This module was crafted with love using PowerShell Core 7.3.6. A handful of functions take advantage of the `Foreach-Object -Parallel` cmdlet, which means you'll need at least PowerShell 7.0 Preview 3 to enjoy those bits. I highly recommend you install the latest version. To get started, you'll need to have the base Az module installed:
-
-```PowerShell
-Install-Module Az
-```
-
-If you encounter any challenges while using this module, consider updating both your PowerShell version and the Az module to the latest available versions.
-
-## Installation
-
-As of now, the AzFinOps module is not available on the PowerShell Gallery. To install the module, you'll need to manually download it and place it in your module's folder. Follow these steps:
-
-1. **Download Module:**  
-    Download the module from the [release page](https://github.com/sc-andrep/AzFinOps/releases).
-
-2. **Extract to Module Folder:**  
-    Extract the downloaded module files and place them in your PowerShell module folder.
-
-## Usage
-
-Detailed information about each function and its usage can be found using the `Get-Help` cmdlet. This provides both a description of the function and practical examples of how to use it effectively.
-
-## FAQ
-
-**Q: Can I customize the output format?**
-A: By default, all functions display output in the host window using `Write-Host`. However, if you wish to save the output to a file, you can use the `-Output path-to-file` parameter. This allows the function to export the output as a CSV file.
-
-Feel free to explore the various functions in this module to streamline your Azure Financial Operations and enhance your cost optimization efforts.
+Checkout the [wiki](https://github.com/AzFinOps/AzFinOps/wiki) for detailed information about installation, module's functions and other important aspects of this project.
