@@ -5,7 +5,7 @@
   RootModule = 'Az.FinOps.psm1'
 
   # Version number of this module.
-  ModuleVersion = '1.1.0'
+  ModuleVersion = '1.1.1'
 
   # Author of this module
   Author = 'André'
@@ -17,11 +17,24 @@
   Description = 'This module provides functions for managing Azure Financial Operations.'
 
   # Modules that must be imported into the global environment prior to importing this module
-  RequiredModules = @('Az.Accounts', 'Az.Advisor', 'Az.Resources',
-  'Az.ResourceGraph')
+  RequiredModules = @(
+    'Az.Accounts',
+    'Az.Advisor',
+    'Az.Resources',
+    'Az.ResourceGraph'
+  )
 
   # Minimum version of the PowerShell engine required by this module
   PowerShellVersion = '7.0'
+
+  # Specifies the functions to export from this module
+  FunctionsToExport = @(
+    'Get-AzFinOpsRecommendation',
+    'Get-AzFinOpsTag'
+  )
+
+  # Specifies the cmdlets to export from this module
+  CmdletsToExport = @()
 
   # HelpInfo URI of this module
   HelpInfoURI = 'https://github.com/AzFinOps/AzFinOps'

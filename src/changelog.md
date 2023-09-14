@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1]
+
+### Updated
+
+- Changed folder structure to help manage multiple functions as the module
+increases.
+
 ## [1.1.0] - 2023-09-14
 
 ### Added
