@@ -165,7 +165,7 @@ function Get-AzFinOpsTag {
     } until (
       $null -eq $query.SkipToken
     )
-    
+
     foreach ($resource in $resources) {
       Write-Information "Checking $($resource.ResourceId)"
       $row = New-Object PSObject -Property @{
